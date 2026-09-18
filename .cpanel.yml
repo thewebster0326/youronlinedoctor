@@ -1,12 +1,12 @@
 ---
 deployment:
   tasks:
-    # If youronlinedoctor.co.za is an ADDON domain on this cPanel account,
-    # change the line below to its own docroot, e.g.
-    #   export DEPLOYPATH=$HOME/youronlinedoctor.co.za/
+    # youronlinedoctor.co.za is the account's PRIMARY domain, so public_html is
+    # its document root. For an addon domain, point DEPLOYPATH at that domain's
+    # own docroot instead.
     - export DEPLOYPATH=$HOME/public_html/
-    - /bin/mkdir -p $DEPLOYPATH/assets
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp styles.css $DEPLOYPATH
-    - /bin/cp robots.txt $DEPLOYPATH
-    - /bin/cp -R assets/. $DEPLOYPATH/assets/
+    - /bin/mkdir -p $DEPLOYPATH/assets $DEPLOYPATH/static
+    - /bin/cp -f *.html $DEPLOYPATH
+    - /bin/cp -f robots.txt sitemap.xml $DEPLOYPATH
+    - /bin/cp -Rf assets/. $DEPLOYPATH/assets/
+    - /bin/cp -Rf static/. $DEPLOYPATH/static/
