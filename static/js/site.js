@@ -110,7 +110,21 @@
     if (existing) {
       applyConsent(existing);
     } else {
-      window.setTimeout(function () { bar.classList.add('is-open'); }, 900);
+      // Hold the bar back until the visitor scrolls (or 6s passes) so it never
+      // lands on top of the hero call to action on a phone. Nothing
+      // non-essential is stored before a choice is made, so deferring is safe.
+      var shown = false;
+      var reveal = function () {
+        if (shown) return;
+        shown = true;
+        bar.classList.add('is-open');
+        window.removeEventListener('scroll', onFirstScroll);
+      };
+      var onFirstScroll = function () {
+        if (window.scrollY > 120) reveal();
+      };
+      window.addEventListener('scroll', onFirstScroll, { passive: true });
+      window.setTimeout(reveal, 6000);
     }
 
     bar.addEventListener('click', function (e) {

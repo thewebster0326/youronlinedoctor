@@ -821,8 +821,10 @@ section { position: relative; }
     background: linear-gradient(180deg, rgba(7, 7, 10, 0.5) 0%, rgba(7, 7, 10, 0.86) 46%, rgba(7, 7, 10, 0.96) 100%);
   }
   #network-canvas.is-ready { opacity: 0.85; }
-  .hero { padding-bottom: 168px; }
+  .hero { padding-bottom: 110px; }
   .scroll-hint { display: none; }
+  .consent-bar { padding: 16px 18px; gap: 12px; font-size: 0.82rem; }
+  .consent-bar .btn { flex: 1 1 auto; justify-content: center; padding: 10px 16px; }
 }
 
 @media (max-width: 560px) {
