@@ -993,3 +993,55 @@ section { position: relative; }
   .has-sub--wide > .sub { min-width: 0; column-count: 1; }
   .step__num { top: 22px; right: 20px; font-size: 1.7rem; }
 }
+
+/* ========================================================= location pages */
+
+.area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.area-list li { margin: 0; }
+.area-list span {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid rgba(23, 23, 28, 0.12);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.85rem;
+  color: var(--on-light-mut);
+}
+.band--dark .area-list span,
+.band--dark2 .area-list span {
+  background: var(--ink-3);
+  border-color: rgba(230, 182, 76, 0.14);
+  color: var(--on-dark-mut);
+}
+
+.footer-areas {
+  margin-top: 46px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(230, 182, 76, 0.12);
+}
+.footer-areas h4 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 14px;
+}
+.footer-areas a {
+  display: inline-block;
+  margin: 0 18px 8px 0;
+  font-size: 0.87rem;
+  color: var(--on-dark-mut);
+  text-decoration: none;
+  transition: color 180ms var(--ease);
+}
+.footer-areas a:hover,
+.footer-areas a:focus-visible { color: var(--gold-light); }

@@ -569,9 +569,10 @@ def not_found():
     }
 
 
+from .location_pages import all_location_pages  # noqa: E402
 from .service_pages import all_service_pages  # noqa: E402
 
 ALL_PAGES = [
     home, who_we_are, our_story, our_founder, our_network, services, why_us,
     contact, privacy_policy, terms, telemedicine_disclaimer, not_found,
-] + all_service_pages()
+] + all_service_pages() + all_location_pages()

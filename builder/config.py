@@ -72,6 +72,11 @@ NAV = [
         "wide": True,
         "children": None,  # filled from services_content at import time, below
     },
+    {
+        "label": "Locations",
+        "href": "/online-doctor-johannesburg.html",
+        "children": None,  # filled from locations_content at import time, below
+    },
     {"label": "Why Us", "href": "/why-your-online-doctor.html"},
     {"label": "Contact", "href": "/contact.html"},
 ]
@@ -231,7 +236,14 @@ REASONS = [
 # than by hand so adding a service to services_content.py is the only edit.
 from .services_content import SERVICE_PAGES as _SERVICE_PAGES  # noqa: E402
 
+from .locations_content import LOCATION_PAGES as _LOCATION_PAGES  # noqa: E402
+
 for _item in NAV:
+    if _item["label"] == "Locations":
+        _item["children"] = [
+            {"label": _l["nav_label"], "href": "/{}.html".format(_l["slug"])}
+            for _l in _LOCATION_PAGES
+        ]
     if _item["label"] == "Services":
         _item["children"] = (
             [{"label": "All Services", "href": "/services.html"}]

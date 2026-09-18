@@ -20,7 +20,7 @@ SERVICE_PAGES = [
         "eyebrow": "Online Doctor Consultation",
         "h1": "Consult a doctor ",
         "h1_tail": "online",
-        "title": "Online Doctor Consultation South Africa | Your Online Doctor",
+        "title": "Online Doctor Consultation | Your Online Doctor",
         "description": "Consult a registered doctor online from anywhere in South Africa. "
                        "Assessment, advice, and prescriptions or referrals where appropriate.",
         "lede": "Speak to a doctor without travelling to a waiting room. Consultations happen "

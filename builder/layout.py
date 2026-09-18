@@ -5,7 +5,7 @@ import json
 from .config import BRAND, CONTACT, FOUNDER, NAV, TRACKING
 from .icons import icon
 
-ASSET_VERSION = "4"
+ASSET_VERSION = "5"
 
 
 # ----------------------------------------------------------------- helpers
@@ -191,6 +191,14 @@ def _header(current_path):
     )
 
 
+def _area_links():
+    from .locations_content import LOCATION_PAGES
+    return "".join(
+        '<a href="/{slug}.html">{label}</a>'.format(slug=l["slug"], label=l["nav_label"])
+        for l in LOCATION_PAGES
+    )
+
+
 def _footer():
     reg_bits = []
     if FOUNDER["hpcsa_number"]:
@@ -234,6 +242,8 @@ def _footer():
 
         "</div>"
 
+        '<div class="footer-areas"><h4>Where We Serve</h4>{areas}</div>'
+
         '<p class="disclaimer">The information on this website is for general '
         "information and does not constitute medical advice. It is not a substitute for "
         "a consultation with a registered healthcare professional. All services are "
@@ -260,6 +270,7 @@ def _footer():
         wa=whatsapp_url(),
         email=CONTACT["email"],
         addr="<br>".join(CONTACT["address_lines"]),
+        areas=_area_links(),
         registration=registration,
         year=2026,
         legal=BRAND["legal_name"],
