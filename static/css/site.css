@@ -823,6 +823,8 @@ section { position: relative; }
   #network-canvas.is-ready { opacity: 0.85; }
   .hero { padding-bottom: 110px; }
   .scroll-hint { display: none; }
+  /* Keep the hero CTAs clear of the floating call/WhatsApp buttons. */
+  .hero .btn-row { max-width: 440px; }
   .consent-bar { padding: 16px 18px; gap: 12px; font-size: 0.82rem; }
   .consent-bar .btn { flex: 1 1 auto; justify-content: center; padding: 10px 16px; }
 }
