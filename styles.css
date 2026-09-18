@@ -1,0 +1,217 @@
+/* Your Online Dr — under-construction holding page */
+
+:root {
+  --black:        #000000;
+  --ink:          #0b0906;
+  --gold:         #e6b64c;
+  --gold-light:   #f9e3a4;
+  --gold-deep:    #a9772a;
+  --gold-line:    rgba(230, 182, 76, 0.28);
+  --text:         #efe7d8;
+  --text-muted:   #9c917f;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--black);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.stage {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px 24px;
+  overflow: hidden;
+}
+
+/* Soft gold halo behind the mark */
+.glow {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  width: min(900px, 130vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(230, 182, 76, 0.16) 0%, rgba(169, 119, 42, 0.06) 38%, transparent 68%);
+  pointer-events: none;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  text-align: center;
+  animation: rise 900ms ease-out both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel { animation: none; }
+}
+
+.logo {
+  display: block;
+  width: min(420px, 84vw);
+  height: auto;
+  margin: 0 auto 22px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 7.2vw, 3.1rem);
+  line-height: 1.12;
+  letter-spacing: 0.005em;
+  background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 52%, var(--gold-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lede {
+  margin: 0 auto;
+  max-width: 34rem;
+  font-size: clamp(0.98rem, 2.6vw, 1.09rem);
+  font-weight: 300;
+  line-height: 1.68;
+  color: var(--text-muted);
+}
+
+.rule {
+  width: 120px;
+  height: 1px;
+  margin: 34px auto 30px;
+  background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
+}
+
+.contact-intro {
+  margin: 0 0 20px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.93rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 200ms ease, background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.btn svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  flex: none;
+}
+
+.btn-solid {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 46%, var(--gold-deep) 100%);
+  color: #17110a;
+  box-shadow: 0 8px 26px rgba(230, 182, 76, 0.22);
+}
+
+.btn-ghost {
+  border-color: var(--gold-line);
+  color: var(--gold-light);
+  background: rgba(230, 182, 76, 0.04);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+}
+
+.btn-solid:hover,
+.btn-solid:focus-visible {
+  box-shadow: 0 12px 32px rgba(230, 182, 76, 0.34);
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+  border-color: var(--gold);
+  background: rgba(230, 182, 76, 0.1);
+  color: var(--gold-light);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.contact-lines {
+  margin: 26px 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.contact-lines a {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.contact-lines a:hover,
+.contact-lines a:focus-visible {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold-line);
+}
+
+footer {
+  position: relative;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(156, 145, 127, 0.62);
+}
+
+@media (max-width: 420px) {
+  .stage { padding: 36px 16px 20px; }
+  .actions { gap: 10px; }
+  .btn { padding: 12px 20px; font-size: 0.88rem; }
+  .contact-lines { font-size: 0.84rem; }
+}
