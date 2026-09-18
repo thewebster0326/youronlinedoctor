@@ -71,19 +71,38 @@ def stats_band():
 
 # --------------------------------------------------------------- services
 
-def _service_card(group, linked=False):
+def _normalise(text):
+    """Strip entities so hub group titles match services_content group names."""
+    return (text.replace("&rsquo;", "’").replace("&amp;", "&")
+                .replace("’", "'").strip().lower())
+
+
+def _service_card(group):
+    from .services_content import SERVICE_PAGES
+
     items = "".join("<li>{}</li>".format(i) for i in group["items"])
-    title = group["title"]
-    if linked:
-        title = '<a href="/services.html">{}</a>'.format(title)
+
+    # Link through to any landing page belonging to this group.
+    pages = [s for s in SERVICE_PAGES
+             if _normalise(s["group"]) == _normalise(group["title"])]
+    links = ""
+    if pages:
+        links = '<div class="card__links">{}</div>'.format("".join(
+            '<a href="/{slug}.html">{label}</a>'.format(
+                slug=s["slug"], label=s["nav_label"])
+            for s in pages
+        ))
+
     return (
         '<article class="card reveal">'
         '<div class="card__icon">{icon}</div>'
         "<h3>{title}</h3>"
         "<p>{blurb}</p>"
         '<ul class="card__list">{items}</ul>'
+        "{links}"
         "</article>"
-    ).format(icon=icon(group["icon"]), title=title, blurb=group["blurb"], items=items)
+    ).format(icon=icon(group["icon"]), title=group["title"],
+             blurb=group["blurb"], items=items, links=links)
 
 
 def services_grid(limit=None, tone="light", show_heading=True):
@@ -291,3 +310,84 @@ def page_hero(eyebrow, title, gold_tail, lede):
 
 def prose(blocks, tone="light"):
     return band('<div class="narrow reveal">{}</div>'.format("".join(blocks)), tone=tone)
+
+
+# ------------------------------------------------------------ service pages
+
+def steps_section(service_label="a consultation"):
+    """How it works - four steps, worded around the service in question."""
+    steps = [
+        ("01", "Get in touch",
+         "Message us on WhatsApp, call, or send an email. Tell us briefly what you need."),
+        ("02", "We arrange a time",
+         "We confirm a time for {} that fits around your day.".format(service_label)),
+        ("03", "The consultation",
+         "The healthcare professional takes your history, assesses the concern and discusses "
+         "the appropriate next step with you."),
+        ("04", "What happens next",
+         "A prescription, certificate, test request or referral &mdash; whichever is "
+         "clinically appropriate for your situation."),
+    ]
+    cards = "".join(
+        '<article class="card step reveal"><span class="step__num">{n}</span>'
+        "<h3>{t}</h3><p>{b}</p></article>".format(n=n, t=t, b=b)
+        for n, t, b in steps
+    )
+    return band(
+        heading("How It Works", "From first message to ",
+                gold_tail="next step", center=True)
+        + '<div class="grid grid--2">{}</div>'.format(cards),
+        tone="dark",
+    )
+
+
+def faq_section(faqs):
+    items = "".join(
+        "<details class=\"faq reveal\"><summary>{q}</summary><div class=\"faq__a\">"
+        "<p>{a}</p></div></details>".format(q=q, a=a)
+        for q, a in faqs
+    )
+    return band(
+        heading("Questions", "Common ", gold_tail="questions", center=True)
+        + '<div class="faqs">{}</div>'.format(items),
+        tone="light",
+    )
+
+
+def related_services(slugs, by_slug):
+    cards = ""
+    for slug in slugs:
+        s = by_slug.get(slug)
+        if not s:
+            continue
+        cards += (
+            '<a class="card reveal card--link" href="/{slug}.html">'
+            "<h3>{label}</h3><p>{lede}</p>"
+            '<span class="card__more">Read more{arrow}</span></a>'
+        ).format(slug=slug, label=s["nav_label"], lede=s["lede"], arrow=icon("arrow"))
+    if not cards:
+        return ""
+    return band(
+        heading("Related", "You may also ", gold_tail="be looking for", center=True)
+        + '<div class="grid grid--3">{}</div>'.format(cards),
+        tone="light2",
+    )
+
+
+def covers_block(title, items, suitability):
+    lis = "".join("<li>{}</li>".format(i) for i in items)
+    return band(
+        '<div class="split">'
+        '<div class="reveal">'
+        + "<h2>{}</h2>".format(title)
+        + '<div class="rule"></div>'
+        + '<ul class="card__list check-list">{}</ul>'.format(lis)
+        + "</div>"
+        '<div class="reveal">'
+        + "<h2>Good to know</h2>"
+        + '<div class="rule"></div>'
+        + '<p class="lede">{}</p>'.format(suitability)
+        + '<p class="disclaimer">{}</p>'.format(SERVICES_DISCLAIMER)
+        + "</div></div>",
+        tone="light",
+    )

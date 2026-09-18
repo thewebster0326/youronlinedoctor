@@ -66,7 +66,12 @@ NAV = [
             {"label": "Our Network", "href": "/our-network.html"},
         ],
     },
-    {"label": "Services", "href": "/services.html"},
+    {
+        "label": "Services",
+        "href": "/services.html",
+        "wide": True,
+        "children": None,  # filled from services_content at import time, below
+    },
     {"label": "Why Us", "href": "/why-your-online-doctor.html"},
     {"label": "Contact", "href": "/contact.html"},
 ]
@@ -220,3 +225,18 @@ REASONS = [
     ("Patient Centred", "heart",
      "A healthcare journey built to be simpler, more connected and more convenient."),
 ]
+
+
+# The Services dropdown lists every service landing page. Populated here rather
+# than by hand so adding a service to services_content.py is the only edit.
+from .services_content import SERVICE_PAGES as _SERVICE_PAGES  # noqa: E402
+
+for _item in NAV:
+    if _item["label"] == "Services":
+        _item["children"] = (
+            [{"label": "All Services", "href": "/services.html"}]
+            + [
+                {"label": _s["nav_label"], "href": "/{}.html".format(_s["slug"])}
+                for _s in _SERVICE_PAGES
+            ]
+        )

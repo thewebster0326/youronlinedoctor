@@ -5,7 +5,7 @@ import json
 from .config import BRAND, CONTACT, FOUNDER, NAV, TRACKING
 from .icons import icon
 
-ASSET_VERSION = "3"
+ASSET_VERSION = "4"
 
 
 # ----------------------------------------------------------------- helpers
@@ -152,8 +152,9 @@ def _nav_markup(current_path):
             )
             child_active = any(c["href"].endswith(current_path) for c in item["children"])
             out.append(
-                '<li class="has-sub"><a href="{href}"{aria}>{label}</a>'
+                '<li class="has-sub{wide}"><a href="{href}"{aria}>{label}</a>'
                 '<ul class="sub">{kids}</ul></li>'.format(
+                    wide=" has-sub--wide" if item.get("wide") else "",
                     href=href,
                     aria=' aria-current="page"' if child_active else "",
                     label=item["label"],
