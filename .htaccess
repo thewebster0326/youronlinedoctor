@@ -1,0 +1,78 @@
+# Your Online Doctor - Apache configuration
+# Generated for cPanel/Apache. Deployed by .cpanel.yml.
+
+Options -Indexes
+DirectoryIndex index.html
+
+# ---------------------------------------------------------------- canonical
+# Every page was reachable on four URLs (http/https, www/non-www), which
+# splits ranking signals and risks the wrong version being indexed.
+# One canonical host: https://www.youronlinedoctor.co.za
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://www.youronlinedoctor.co.za/$1 [R=301,L]
+
+  # Force www
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^(.*)$ https://www.youronlinedoctor.co.za/$1 [R=301,L]
+</IfModule>
+
+# ------------------------------------------------------------------- errors
+ErrorDocument 404 /404.html
+
+# -------------------------------------------------------------- compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+</IfModule>
+
+# ------------------------------------------------------------------ caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images and fonts are fingerprinted by name and rarely change
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+
+  # CSS and JS carry a ?v= cache buster, so they can be cached hard too
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+
+  # HTML must stay fresh so deploys are picked up immediately
+  ExpiresByType text/html                 "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|png|jpe?g|svg|woff2|css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # Modest hardening - no behaviour change for visitors
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# --------------------------------------------------------------- mime types
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType application/manifest+json .webmanifest
+</IfModule>

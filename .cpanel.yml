@@ -8,5 +8,6 @@ deployment:
     - /bin/mkdir -p $DEPLOYPATH/assets $DEPLOYPATH/static
     - /bin/cp -f *.html $DEPLOYPATH
     - /bin/cp -f robots.txt sitemap.xml $DEPLOYPATH
+    - /bin/cp -f .htaccess $DEPLOYPATH
     - /bin/cp -Rf assets/. $DEPLOYPATH/assets/
     - /bin/cp -Rf static/. $DEPLOYPATH/static/

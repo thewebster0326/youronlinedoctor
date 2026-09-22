@@ -5,7 +5,7 @@ import json
 from .config import BRAND, CONTACT, FOUNDER, NAV, TRACKING
 from .icons import icon
 
-ASSET_VERSION = "6"
+ASSET_VERSION = "7"
 
 
 # ----------------------------------------------------------------- helpers
@@ -261,6 +261,10 @@ def _footer():
         "</span>"
         "</div>"
 
+        '<p class="footer-credit">Website by '
+        '<a href="https://thewebster.co.za" target="_blank" rel="noopener">'
+        "The Webster</a></p>"
+
         "</div></footer>"
     ).format(
         name=BRAND["name"],
@@ -360,9 +364,13 @@ def render(page):
 <meta property="og:title" content="{og_title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{domain}/assets/logo.png">
+<meta property="og:image" content="{domain}/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{brand} - {tagline}">
 <meta property="og:locale" content="en_ZA">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{domain}/assets/og-image.jpg">
 
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/favicon.png">
@@ -395,6 +403,7 @@ def render(page):
         url=url,
         domain=BRAND["domain"],
         brand=BRAND["name"],
+        tagline=BRAND["tagline"],
         robots=page.get("robots", "index, follow"),
         v=ASSET_VERSION,
         gtm_head=_gtm_head(),

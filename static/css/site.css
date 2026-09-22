@@ -1127,3 +1127,23 @@ section { position: relative; }
   .split__media--wide { aspect-ratio: 16 / 10; max-width: none; }
   .page-hero__img { filter: saturate(0.7) contrast(1.04) brightness(0.5); }
 }
+
+/* ---------------------------------------------------------- footer credit */
+
+.footer-credit {
+  margin: 18px 0 0;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  color: rgba(154, 145, 132, 0.62);
+}
+.footer-credit a {
+  color: rgba(230, 182, 76, 0.78);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 180ms var(--ease), border-color 180ms var(--ease);
+}
+.footer-credit a:hover,
+.footer-credit a:focus-visible {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold-line);
+}
