@@ -15,6 +15,8 @@ SERVICE_PAGES = [
     # ------------------------------------------------------------------ core
     {
         "slug": "online-doctor-consultation",
+        "image": "consultation",
+        "image_alt": "A clinician holding a mobile phone",
         "nav_label": "Online Doctor Consultation",
         "group": "Medical",
         "eyebrow": "Online Doctor Consultation",
@@ -67,6 +69,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "prescriptions-online",
+        "image": "pharmacy",
+        "image_alt": "Shelves in a pharmacy dispensary",
         "nav_label": "Online Prescriptions",
         "group": "Medical",
         "eyebrow": "Online Prescriptions",
@@ -114,6 +118,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "sick-note-online",
+        "image": "remote-care",
+        "image_alt": "A laptop and a stethoscope on a desk",
         "nav_label": "Sick Notes & Certificates",
         "group": "Medical",
         "eyebrow": "Medical Certificates",
@@ -162,6 +168,8 @@ SERVICE_PAGES = [
     # --------------------------------------------------------------- women's
     {
         "slug": "womens-health",
+        "image": "video-consult",
+        "image_alt": "A remote consultation on screen",
         "nav_label": "Women's Health",
         "group": "Women's Health",
         "eyebrow": "Women&rsquo;s Health",
@@ -205,6 +213,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "contraception",
+        "image": "consultation",
+        "image_alt": "A clinician holding a mobile phone",
         "nav_label": "Contraception",
         "group": "Women's Health",
         "eyebrow": "Contraception",
@@ -249,6 +259,8 @@ SERVICE_PAGES = [
     # ----------------------------------------------------------------- men's
     {
         "slug": "mens-health",
+        "image": "remote-care",
+        "image_alt": "A laptop and a stethoscope on a desk",
         "nav_label": "Men's Health",
         "group": "Men's Health",
         "eyebrow": "Men&rsquo;s Health",
@@ -297,6 +309,8 @@ SERVICE_PAGES = [
     # ------------------------------------------------- sexual & reproductive
     {
         "slug": "sti-consultation",
+        "image": "laboratory",
+        "image_alt": "Analysers on a laboratory bench",
         "nav_label": "STI Consultations",
         "group": "Sexual & Reproductive Health",
         "eyebrow": "STI Consultations",
@@ -342,6 +356,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "prep-online",
+        "image": "diagnostics",
+        "image_alt": "A diagnostic laboratory",
         "nav_label": "HIV Prevention & PrEP",
         "group": "Sexual & Reproductive Health",
         "eyebrow": "HIV Prevention",
@@ -389,6 +405,8 @@ SERVICE_PAGES = [
     # ------------------------------------------------------ weight & wellness
     {
         "slug": "weight-management",
+        "image": "nutrition",
+        "image_alt": "A prepared bowl of vegetables",
         "nav_label": "Weight Management",
         "group": "Weight & Wellness",
         "eyebrow": "Weight Management",
@@ -434,6 +452,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "dietitian",
+        "image": "nutrition",
+        "image_alt": "A prepared bowl of vegetables",
         "nav_label": "Dietitian",
         "group": "Weight & Wellness",
         "eyebrow": "Dietitian",
@@ -485,6 +505,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "biokinetics",
+        "image": "biokinetics",
+        "image_alt": "Exercise-based rehabilitation",
         "nav_label": "Biokinetics",
         "group": "Weight & Wellness",
         "eyebrow": "Biokinetics",
@@ -539,6 +561,8 @@ SERVICE_PAGES = [
     # ----------------------------------------------------------- mental health
     {
         "slug": "mental-health",
+        "image": "therapy",
+        "image_alt": "Two people in conversation",
         "nav_label": "Mental Health",
         "group": "Mental Health",
         "eyebrow": "Mental Health",
@@ -582,6 +606,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "psychology",
+        "image": "therapy",
+        "image_alt": "Two people in conversation",
         "nav_label": "Psychology",
         "group": "Mental Health",
         "eyebrow": "Psychology",
@@ -634,6 +660,8 @@ SERVICE_PAGES = [
     # ------------------------------------------------------------------ other
     {
         "slug": "physiotherapy",
+        "image": "physiotherapy",
+        "image_alt": "A physiotherapy treatment session",
         "nav_label": "Physiotherapy",
         "group": "Other Services",
         "eyebrow": "Physiotherapy",
@@ -683,6 +711,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "mobile-doctor",
+        "image": "remote-care",
+        "image_alt": "A laptop and a stethoscope on a desk",
         "nav_label": "Mobile Doctor",
         "group": "Other Services",
         "eyebrow": "Mobile Doctor Services",
@@ -723,6 +753,8 @@ SERVICE_PAGES = [
     },
     {
         "slug": "driver-pdp-medicals",
+        "image": "consultation",
+        "image_alt": "A clinician holding a mobile phone",
         "nav_label": "Driver & PDP Medicals",
         "group": "Other Services",
         "eyebrow": "Medical Assessments",

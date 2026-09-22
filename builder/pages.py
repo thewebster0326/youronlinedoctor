@@ -13,31 +13,24 @@ BRANDN = BRAND["name"]
 def home():
     body = "".join([
         c.hero(),
-        c.band(
-            '<div class="split">'
-            '<div class="reveal">'
-            + c.heading("Who We Are",
-                        "More than an ",
-                        gold_tail="online consultation")
+        c.media_split(
+            "video-consult", "A remote consultation on screen",
+            c.heading("Who We Are",
+                      "More than an ",
+                      gold_tail="online consultation")
             + "<p>Your Online Doctor is a South African digital healthcare platform "
               "connecting patients with a growing network of healthcare professionals and "
               "healthcare services through one convenient digital platform.</p>"
             + "<p>The platform was founded by " + FOUNDER["name"] + " with a simple "
               "vision: to use technology to make quality healthcare more accessible, "
               "convenient and affordable.</p>"
+            + "<p>We recognise that accessing healthcare is not always easy. Patients may "
+              "live far from healthcare facilities, struggle to find convenient appointment "
+              "times, have demanding work or family responsibilities, or need healthcare "
+              "outside traditional consulting hours. Technology creates an opportunity to "
+              "remove some of those barriers.</p>"
             + '<div class="btn-row"><a class="btn btn--ghost" href="/who-we-are.html">'
-              "Read more about us" + icon("arrow") + "</a></div>"
-            + "</div>"
-            '<div class="reveal">'
-            + "<p class=\"lede\">We recognise that accessing healthcare is not always easy. "
-              "Patients may live far from healthcare facilities, struggle to find convenient "
-              "appointment times, have demanding work or family responsibilities, spend "
-              "significant time travelling and waiting, or need healthcare outside "
-              "traditional consulting hours.</p>"
-            + "<p class=\"lede\">Technology creates an opportunity to remove some of those "
-              "barriers.</p>"
-            + "</div>"
-            "</div>",
+              "Read more about us" + icon("arrow") + "</a></div>",
             tone="light",
         ),
         c.stats_band(),
@@ -71,6 +64,7 @@ def who_we_are():
             "More than an ", "online consultation",
             "A South African digital healthcare platform connecting patients with a growing "
             "network of healthcare professionals and healthcare services.",
+            image="remote-care", image_alt="A laptop and a stethoscope on a desk",
         ),
         c.prose([
             "<p>Your Online Doctor is a South African digital healthcare platform "
@@ -131,6 +125,7 @@ def our_story():
             "From a consultation to a ", "connected platform",
             "Your Online Doctor was created around a simple question: what if accessing "
             "healthcare could be easier?",
+            image="telehealth", image_alt="A stethoscope beside a mobile phone",
         ),
         c.prose([
             "<p>Traditional healthcare often requires patients to travel to a "
@@ -207,6 +202,7 @@ def our_network():
             "One platform. A network of ", "healthcare professionals.",
             "Your Online Doctor is designed to connect patients with a growing network of "
             "healthcare professionals across multiple disciplines.",
+            image="video-consult", image_alt="A remote consultation on screen",
         ),
         c.network_teaser(show_heading=False),
         c.network_services_grid(),
@@ -284,6 +280,7 @@ def services():
             "Care across ", "many disciplines",
             "Every service is delivered by an appropriate healthcare professional through "
             "one digital platform.",
+            image="consultation", image_alt="A clinician holding a mobile phone",
         ),
         c.services_grid(tone="light", show_heading=False),
         c.extended_access(),
@@ -315,6 +312,7 @@ def why_us():
             "Healthcare designed ", "around you",
             "Seven reasons patients choose a connected digital platform over a single "
             "provider.",
+            image="video-consult", image_alt="A remote consultation on screen",
         ),
         c.reasons_grid(tone="light", show_heading=False),
         c.stats_band(),
@@ -384,6 +382,7 @@ def contact():
             "Speak to ", "Your Online Doctor",
             "Start a WhatsApp conversation, give us a call, or send an email &mdash; and we "
             "will connect you with the right healthcare professional.",
+            image="city-pretoria", image_alt="The Union Buildings in Pretoria",
         ),
         c.band(details + address, tone="light"),
         c.cta_band(),

@@ -14,6 +14,8 @@ Accuracy rules followed:
 LOCATION_PAGES = [
     {
         "slug": "online-doctor-johannesburg",
+        "image": "city-johannesburg",
+        "image_alt": "The Johannesburg skyline",
         "nav_label": "Johannesburg",
         "place": "Johannesburg",
         "region": "Gauteng",
@@ -70,6 +72,8 @@ LOCATION_PAGES = [
     },
     {
         "slug": "online-doctor-pretoria",
+        "image": "city-pretoria",
+        "image_alt": "The Union Buildings in Pretoria",
         "nav_label": "Pretoria",
         "place": "Pretoria",
         "region": "Gauteng",
@@ -124,6 +128,8 @@ LOCATION_PAGES = [
     },
     {
         "slug": "online-doctor-cape-town",
+        "image": "city-cape-town",
+        "image_alt": "Cape Town beneath Table Mountain",
         "nav_label": "Cape Town",
         "place": "Cape Town",
         "region": "Western Cape",
@@ -177,6 +183,8 @@ LOCATION_PAGES = [
     },
     {
         "slug": "online-doctor-durban",
+        "image": "city-durban",
+        "image_alt": "The Umhlanga lighthouse near Durban",
         "nav_label": "Durban",
         "place": "Durban",
         "region": "KwaZulu-Natal",
@@ -228,6 +236,8 @@ LOCATION_PAGES = [
     },
     {
         "slug": "online-doctor-gauteng",
+        "image": "city-gauteng",
+        "image_alt": "A Gauteng skyline at sunset",
         "nav_label": "Gauteng",
         "place": "Gauteng",
         "region": "Gauteng",
@@ -280,6 +290,8 @@ LOCATION_PAGES = [
     },
     {
         "slug": "telehealth-south-africa",
+        "image": "telehealth",
+        "image_alt": "A stethoscope beside a mobile phone",
         "nav_label": "Telehealth South Africa",
         "place": "South Africa",
         "region": "South Africa",

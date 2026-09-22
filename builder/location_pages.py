@@ -106,7 +106,8 @@ def _nearby_block(loc):
 
 def build(loc):
     body = "".join([
-        c.page_hero(loc["eyebrow"], loc["h1"], loc["h1_tail"], loc["lede"]),
+        c.page_hero(loc["eyebrow"], loc["h1"], loc["h1_tail"], loc["lede"],
+                    image=loc["image"], image_alt=loc["image_alt"]),
         c.prose(["<p>{}</p>".format(p) for p in loc["intro"]], tone="light"),
         _areas_block(loc),
         _services_block(loc),

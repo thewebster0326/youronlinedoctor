@@ -187,11 +187,27 @@ def ecosystem_flow():
     )
 
 
+NETWORK_SERVICE_IMAGES = {
+    "Pharmacies": ("pharmacy", "Shelves in a pharmacy dispensary"),
+    "Laboratories": ("laboratory", "Analysers on a laboratory bench"),
+    "Diagnostic Services": ("diagnostics", "A diagnostic laboratory"),
+}
+
+
 def network_services_grid():
-    cards = "".join(
-        '<article class="card reveal"><h3>{}</h3><p>{}</p></article>'.format(name, blurb)
-        for name, blurb in NETWORK_SERVICES
-    )
+    cards = ""
+    for name, blurb in NETWORK_SERVICES:
+        img, alt = NETWORK_SERVICE_IMAGES.get(name, (None, ""))
+        media = ""
+        if img:
+            media = (
+                '<div class="card__media"><img src="/assets/img/{img}.webp" alt="{alt}" '
+                'width="1333" height="1000" loading="lazy" decoding="async"></div>'
+            ).format(img=img, alt=alt)
+        cards += (
+            '<article class="card card--photo reveal">{media}'
+            '<div class="card__body"><h3>{name}</h3><p>{blurb}</p></div></article>'
+        ).format(media=media, name=name, blurb=blurb)
     return band(
         heading("Connected Services",
                 "Beyond the ",
@@ -293,17 +309,59 @@ def cta_band(title="Ready to speak to a doctor?",
 
 # ---------------------------------------------------------------- page top
 
-def page_hero(eyebrow, title, gold_tail, lede):
-    """Light hero for inner pages - no Three.js, keeps LCP fast."""
-    return """<section class="band band--dark" style="padding-top:clamp(132px,15vw,188px)">
-  <div class="hero__fallback" style="opacity:.55"></div>
-  <div class="shell narrow center" style="position:relative;z-index:2">
-    <p class="eyebrow">{eyebrow}</p>
-    <h1>{title}<span class="gold-text">{tail}</span></h1>
-    <div class="rule"></div>
-    <p class="lede">{lede}</p>
-  </div>
-</section>""".format(eyebrow=eyebrow, title=title, tail=gold_tail, lede=lede)
+def page_hero(eyebrow, title, gold_tail, lede, image=None, image_alt=""):
+    """Light hero for inner pages - no Three.js, keeps LCP fast.
+
+    `image` names a file in assets/img without its extension. It loads eagerly,
+    because where it is used it is the page's largest contentful paint element.
+    """
+    if image:
+        backdrop = (
+            '<img class="page-hero__img" src="/assets/img/{img}.webp" alt="{alt}" '
+            'width="1500" height="843" fetchpriority="high">'
+            '<div class="page-hero__veil"></div>'
+        ).format(img=image, alt=image_alt)
+        extra = " has-photo"
+    else:
+        backdrop = '<div class="hero__fallback" style="opacity:.55"></div>'
+        extra = ""
+
+    return (
+        '<section class="band band--dark page-hero{extra}" '
+        'style="padding-top:clamp(132px,15vw,188px)">'
+        "{backdrop}"
+        '<div class="shell narrow center" style="position:relative;z-index:2">'
+        '<p class="eyebrow">{eyebrow}</p>'
+        '<h1>{title}<span class="gold-text">{tail}</span></h1>'
+        '<div class="rule"></div>'
+        '<p class="lede">{lede}</p>'
+        "</div></section>"
+    ).format(extra=extra, backdrop=backdrop, eyebrow=eyebrow, title=title,
+             tail=gold_tail, lede=lede)
+
+
+def image_band(image, alt, caption=None, tone="light"):
+    """Wide editorial strip. Lazy - it is never the first thing on a page."""
+    cap = '<figcaption>{}</figcaption>'.format(caption) if caption else ""
+    return band(
+        '<figure class="strip reveal">'
+        '<img src="/assets/img/{img}.webp" alt="{alt}" width="1500" height="843" '
+        'loading="lazy" decoding="async">{cap}</figure>'.format(
+            img=image, alt=alt, cap=cap),
+        tone=tone,
+    )
+
+
+def media_split(image, alt, inner, tone="light", flip=False):
+    """Photograph beside a block of content."""
+    media = (
+        '<div class="split__media split__media--wide reveal">'
+        '<img src="/assets/img/{img}.webp" alt="{alt}" width="1500" height="843" '
+        'loading="lazy" decoding="async"></div>'
+    ).format(img=image, alt=alt)
+    text = '<div class="reveal">{}</div>'.format(inner)
+    order = (text + media) if flip else (media + text)
+    return band('<div class="split split--media">{}</div>'.format(order), tone=tone)
 
 
 # ---------------------------------------------------------------- prose

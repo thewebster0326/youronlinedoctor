@@ -44,7 +44,11 @@ def build(service):
             service["h1_tail"],
             service["lede"],
         ),
-        c.prose(["<p>{}</p>".format(p) for p in service["intro"]], tone="light"),
+        c.media_split(
+            service["image"], service["image_alt"],
+            "".join("<p>{}</p>".format(p) for p in service["intro"]),
+            tone="light",
+        ),
         c.covers_block(service["covers_title"], service["covers"], service["suitability"]),
         c.steps_section(),
         c.faq_section(service["faqs"]),

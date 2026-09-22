@@ -5,7 +5,7 @@ import json
 from .config import BRAND, CONTACT, FOUNDER, NAV, TRACKING
 from .icons import icon
 
-ASSET_VERSION = "5"
+ASSET_VERSION = "6"
 
 
 # ----------------------------------------------------------------- helpers
