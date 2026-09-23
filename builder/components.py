@@ -263,9 +263,10 @@ def extended_access():
 
 def founder_block(tone="dark", show_heading=True):
     if FOUNDER["photo"]:
-        media = '<img src="{}" alt="{}" width="800" height="1000">'.format(
-            FOUNDER["photo"], FOUNDER["name"]
-        )
+        media = (
+            '<img src="{}" alt="{}" width="900" height="1125" '
+            'loading="lazy" decoding="async">'
+        ).format(FOUNDER["photo"], FOUNDER["name"])
     else:
         media = (
             '<div class="portrait-placeholder">{ic}<span>Portrait of {name}<br>'
@@ -274,7 +275,7 @@ def founder_block(tone="dark", show_heading=True):
 
     return band(
         '<div class="split">'
-        '<div class="split__media reveal">{media}</div>'
+        '<div class="split__media reveal">' + media + '</div>'
         '<div class="reveal">'
         + (heading("Our Founder", FOUNDER["name"]) if show_heading
            else '<h2>{}</h2><div class="rule"></div>'.format(FOUNDER["name"]))

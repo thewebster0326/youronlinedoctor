@@ -15,11 +15,10 @@ FOUNDER = {
     "name": "Dr Ngoanatsomane Tony Moukangwe",
     "short_name": "Dr Moukangwe",
     "role": "Founder & Clinical Lead",
-    # TODO(client): HPCSA registration number and practice number
+    # TODO(client): HPCSA registration number still outstanding
     "hpcsa_number": None,
-    "practice_number": None,
-    # TODO(client): a real photograph. No stock photo for a named person.
-    "photo": None,
+    "practice_number": "Pr 0912646",
+    "photo": "/assets/img/founder.webp",
     "quote": (
         "Healthcare should be accessible wherever you are, and technology gives us "
         "the opportunity to connect patients with the right healthcare professional "
