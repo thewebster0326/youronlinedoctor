@@ -1147,3 +1147,33 @@ section { position: relative; }
   color: var(--gold-light);
   border-bottom-color: var(--gold-line);
 }
+
+/* ----------------------------------------------------------- social links */
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social a {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold-line);
+  border-radius: 10px;
+  background: rgba(230, 182, 76, 0.05);
+  color: var(--gold);
+  transition: transform 180ms var(--ease), background-color 180ms var(--ease),
+              border-color 180ms var(--ease), color 180ms var(--ease);
+}
+.social a:hover,
+.social a:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  background: rgba(230, 182, 76, 0.13);
+  color: var(--gold-light);
+}
+.social a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.social svg { width: 17px; height: 17px; fill: currentColor; }

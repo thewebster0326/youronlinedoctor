@@ -2,10 +2,10 @@
 
 import json
 
-from .config import BRAND, CONTACT, FOUNDER, NAV, TRACKING
+from .config import BRAND, CONTACT, FOUNDER, NAV, SOCIAL, TRACKING
 from .icons import icon
 
-ASSET_VERSION = "9"
+ASSET_VERSION = "10"
 
 
 # ----------------------------------------------------------------- helpers
@@ -58,6 +58,7 @@ def _organization_schema():
         "email": CONTACT["email"],
         "foundingDate": BRAND["founded"],
         "areaServed": {"@type": "Country", "name": "South Africa"},
+        "sameAs": [url for _label, _name, url in SOCIAL],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": CONTACT["address_street"],
@@ -191,6 +192,15 @@ def _header(current_path):
     )
 
 
+def _social_links():
+    return "".join(
+        '<a href="{url}" target="_blank" rel="noopener" aria-label="{label}" '
+        'data-track="social_click" data-location="footer">{ic}</a>'.format(
+            url=url, label=label, ic=icon(name))
+        for label, name, url in SOCIAL
+    )
+
+
 def _area_links():
     from .locations_content import LOCATION_PAGES
     return "".join(
@@ -217,6 +227,7 @@ def _footer():
         '<div class="footer-brand">'
         '<img src="/assets/logo.png" alt="{name}" width="592" height="227">'
         "<p>{supporting}</p>"
+        '<div class="social">{social}</div>'
         "</div>"
 
         "<div><h4>Explore</h4><ul>"
@@ -275,6 +286,7 @@ def _footer():
         email=CONTACT["email"],
         addr="<br>".join(CONTACT["address_lines"]),
         areas=_area_links(),
+        social=_social_links(),
         registration=registration,
         year=2026,
         legal=BRAND["legal_name"],

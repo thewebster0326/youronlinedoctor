@@ -44,6 +44,19 @@ CONTACT = {
     "country": "ZA",
 }
 
+# ---------------------------------------------------------------- social
+# Canonical profile URLs. The Facebook one was supplied as a /share/ link;
+# that redirects, so the resolved page URL is used instead.
+# The TikTok handle is a leftover from a previous business - the account
+# itself is "Your Online Dr" and carries the same phone number as this site.
+
+SOCIAL = [
+    ("Facebook", "facebook",
+     "https://www.facebook.com/people/Your-Online-Doctor/61593042665578/"),
+    ("TikTok", "tiktok",
+     "https://www.tiktok.com/@mobile.iv.drip.ba"),
+]
+
 # ------------------------------------------------------------- tracking
 # Placeholders. Swap the GTM container ID and every downstream tag
 # (GA4, Google Ads, Meta Pixel) lights up without touching a template.
