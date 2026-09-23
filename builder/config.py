@@ -34,8 +34,10 @@ CONTACT = {
     "email": "info@youronlinedoctor.co.za",
     "address_lines": [
         "G16 Barclays Square Shopping Centre",
+        "Celliers Street",
         "Pretoria, 0001",
     ],
+    "address_street": "G16 Barclays Square Shopping Centre, Celliers Street",
     "address_locality": "Pretoria",
     "address_region": "Gauteng",
     "address_postal": "0001",

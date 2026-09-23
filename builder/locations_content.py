@@ -108,7 +108,8 @@ LOCATION_PAGES = [
             "Pretoria's working population is heavily concentrated in offices and "
             "institutions with fixed hours. Appointments that do not require travel fit that "
             "pattern far better.",
-            "Our registered address is at G16 Barclays Square Shopping Centre in Pretoria. It "
+            "Our registered address is at G16 Barclays Square Shopping Centre, Celliers Street, "
+            "Pretoria. It "
             "is a business address rather than a walk-in clinic - consultations are conducted "
             "remotely.",
         ],

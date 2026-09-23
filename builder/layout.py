@@ -5,7 +5,7 @@ import json
 from .config import BRAND, CONTACT, FOUNDER, NAV, TRACKING
 from .icons import icon
 
-ASSET_VERSION = "8"
+ASSET_VERSION = "9"
 
 
 # ----------------------------------------------------------------- helpers
@@ -60,7 +60,7 @@ def _organization_schema():
         "areaServed": {"@type": "Country", "name": "South Africa"},
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": CONTACT["address_lines"][0],
+            "streetAddress": CONTACT["address_street"],
             "addressLocality": CONTACT["address_locality"],
             "addressRegion": CONTACT["address_region"],
             "postalCode": CONTACT["address_postal"],
