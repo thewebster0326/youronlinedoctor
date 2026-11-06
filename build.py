@@ -28,6 +28,10 @@ PRIORITY = {
     "services.html": "0.9",
     "our-network.html": "0.9",
     "contact.html": "0.8",
+    "driver-pdp-medicals.html": "0.9",
+    "pdp-medical-pretoria.html": "0.8",
+    "pdp-medical-what-to-expect.html": "0.8",
+    "code-10-code-14-driver-medical.html": "0.8",
 }
 
 

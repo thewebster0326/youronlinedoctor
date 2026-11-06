@@ -771,6 +771,14 @@ SERVICE_PAGES = [
             "This assessment includes physical examination and therefore happens in person. "
             "The platform arranges it, and the surrounding administration can be handled "
             "remotely.",
+            "Most drivers lose a working morning to this: finding somewhere that does them, "
+            "getting there, and waiting. The examination itself is short. What takes the time "
+            "is everything around it, which is the part worth organising properly.",
+            "The medical certificate is one document within a larger application made at a "
+            "Driving Licence Testing Centre. Application steps, fees and how recent your "
+            "certificate has to be are set by the licensing authorities and do change, so "
+            "confirm those with your DLTC. What we can tell you precisely is what happens at "
+            "the assessment, what to bring, and what the doctor is looking for.",
         ],
         "covers_title": "What this covers",
         "covers": [
@@ -792,6 +800,17 @@ SERVICE_PAGES = [
             ("What if I do not pass?",
              "The doctor will explain which criterion was not met and what, if anything, could "
              "change that."),
+            ("Is a code 10 or code 14 licence the same as a PDP?",
+             "No. The licence code is what you are licensed to drive. The Professional Driving "
+             "Permit is a separate authorisation to drive professionally, and it is the permit "
+             "that requires the medical certificate."),
+            ("Can my employer arrange medicals for a group of drivers?",
+             "Yes. Get in touch and we will work out the most practical arrangement, including "
+             "depot visits where mobile services cover the area."),
+            ("How long does the assessment take?",
+             "The examination itself is usually short. Arriving with your documents ready is "
+             "the quickest way through it, because an incomplete certificate is rejected at "
+             "the DLTC."),
         ],
         "related": ["mobile-doctor", "online-doctor-consultation", "sick-note-online"],
     },

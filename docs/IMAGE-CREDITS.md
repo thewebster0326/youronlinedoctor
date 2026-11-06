@@ -22,3 +22,6 @@ converted to WebP for this site.
 | `assets/img/telehealth.webp` | [photo-1576091160501-bbe57469278b](https://unsplash.com/photos/1576091160501-bbe57469278b) | Stethoscope beside a mobile phone |
 | `assets/img/therapy.webp` | [photo-1758273240360-76b908e7582a](https://unsplash.com/photos/1758273240360-76b908e7582a) | Counselling conversation |
 | `assets/img/video-consult.webp` | [photo-1758691461932-d0aa0ebf6b31](https://unsplash.com/photos/1758691461932-d0aa0ebf6b31) | Remote consultation on screen |
+| `assets/img/driving.webp` | [photo-1592805144716-feeccccef5ac](https://unsplash.com/photos/1592805144716-feeccccef5ac) | View from a truck cab on the road |
+| `assets/img/eye-test.webp` | [photo-1576210117723-cd06449a467d](https://unsplash.com/photos/1576210117723-cd06449a467d) | A Snellen eye chart used for vision testing |
+| `assets/img/truck.webp` | [photo-1766785368863-f2188a8c8b32](https://unsplash.com/photos/1766785368863-f2188a8c8b32) | A heavy goods vehicle on a highway |

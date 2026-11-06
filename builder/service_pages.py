@@ -2,6 +2,7 @@
 
 from . import components as c
 from .config import BRAND
+from .icons import icon
 from .services_content import BY_SLUG, SERVICE_PAGES
 
 BRANDN = BRAND["name"]
@@ -36,6 +37,31 @@ def _service_schema(service):
     }
 
 
+def _cluster_guides(slug):
+    """Link a service page to the guides written to support it."""
+    from .guides_content import in_cluster
+
+    clusters = {"driver-pdp-medicals": "pdp"}
+    name = clusters.get(slug)
+    if not name:
+        return ""
+    guides = in_cluster(name)
+    if not guides:
+        return ""
+    cards = "".join(
+        '<a class="card card--link reveal" href="/{slug}.html">'
+        "<h3>{label}</h3><p>{lede}</p>"
+        '<span class="card__more">Read more{arrow}</span></a>'.format(
+            slug=g["slug"], label=g["nav_label"], lede=g["lede"], arrow=icon("arrow"))
+        for g in guides
+    )
+    return c.band(
+        c.heading("Guides", "Before your ", gold_tail="driver medical", center=True)
+        + '<div class="grid grid--3">{}</div>'.format(cards),
+        tone="light2",
+    )
+
+
 def build(service):
     body = "".join([
         c.page_hero(
@@ -53,6 +79,7 @@ def build(service):
         c.steps_section(),
         c.faq_section(service["faqs"]),
         c.related_services(service["related"], BY_SLUG),
+        _cluster_guides(service["slug"]),
         c.cta_band(
             title="Speak to someone about {}".format(service["nav_label"].lower()),
             lede="Send a WhatsApp message and we will connect you with the right "
