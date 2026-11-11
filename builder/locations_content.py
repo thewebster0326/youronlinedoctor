@@ -354,8 +354,8 @@ LOCATION_PAGES = [
     },
     {
         "slug": "telehealth-cape-town",
-        "image": "city-cape-town",
-        "image_alt": "Cape Town beneath Table Mountain",
+        "image": "city-cape-town-aerial",
+        "image_alt": "Cape Town from the air with Table Mountain behind",
         "nav_label": "Telehealth Cape Town",
         "place": "Cape Town",
         "region": "Western Cape",
@@ -418,8 +418,8 @@ LOCATION_PAGES = [
     },
     {
         "slug": "online-doctor-cape-town-southern-suburbs",
-        "image": "city-cape-town",
-        "image_alt": "Cape Town beneath Table Mountain",
+        "image": "cape-town-bay",
+        "image_alt": "Table Mountain seen across the bay",
         "nav_label": "Cape Town Southern Suburbs",
         "place": "the Southern Suburbs",
         "region": "Western Cape",
@@ -474,8 +474,8 @@ LOCATION_PAGES = [
     },
     {
         "slug": "online-doctor-cape-town-northern-suburbs",
-        "image": "city-cape-town",
-        "image_alt": "Cape Town beneath Table Mountain",
+        "image": "cape-town-coast",
+        "image_alt": "The Cape Town coastline from above",
         "nav_label": "Cape Town Northern Suburbs",
         "place": "the Northern Suburbs",
         "region": "Western Cape",
@@ -526,6 +526,119 @@ LOCATION_PAGES = [
         "services": ["online-doctor-consultation", "prescriptions-online", "weight-management"],
         "locations": ["online-doctor-cape-town", "online-doctor-cape-town-southern-suburbs",
                       "telehealth-cape-town"],
+    },
+    {
+        "slug": "online-doctor-pretoria-east-centurion",
+        "image": "pretoria-jacaranda",
+        "image_alt": "Jacaranda trees in bloom in Pretoria",
+        "nav_label": "Pretoria East & Centurion",
+        "place": "Pretoria East and Centurion",
+        "region": "Gauteng",
+        "eyebrow": "Pretoria East & Centurion",
+        "h1": "Online doctor in ",
+        "h1_tail": "Pretoria East & Centurion",
+        "title": "Online Doctor Pretoria East & Centurion | Your Online Doctor",
+        "description": "Online doctor consultations across Pretoria East and Centurion - "
+                       "Menlyn, Lynnwood, Faerie Glen, Highveld and Irene.",
+        "lede": "For the office parks and estates along the eastern side of Tshwane.",
+        "intro": [
+            "Pretoria East and Centurion hold a large share of Tshwane's office and "
+            "corporate population. The parks around Menlyn, Highveld and Route 21, and the "
+            "estates spreading east towards Silver Lakes, are full of people whose working "
+            "day does not pause for a mid-morning appointment.",
+            "They are also a long way from the older practices concentrated nearer the "
+            "centre. The N1 between Centurion and Pretoria is one of the busiest stretches "
+            "in the country at the wrong hour, and it sits directly between a lot of "
+            "residents and their doctor.",
+            "Consulting remotely removes that stretch of road from the equation. The "
+            "assessment happens at your desk or at home, and whatever follows is the same "
+            "as it would be in rooms, where that is clinically appropriate.",
+        ],
+        "areas_title": "Patients across the east and Centurion",
+        "areas": [
+            "Menlyn", "Lynnwood", "Faerie Glen", "Garsfontein", "Moreleta Park",
+            "Silver Lakes", "Die Wilgers", "Centurion", "Highveld", "Irene",
+            "Eldoraigne", "Wierda Park", "Rooihuiskraal", "Olympus", "Waterkloof",
+            "Erasmuskloof",
+        ],
+        "angle_title": "Why remote care suits this area",
+        "angle": [
+            "The constraint here is the working day rather than access to healthcare. "
+            "An appointment that needs no travel fits a corporate schedule in a way a "
+            "consulting-room visit does not.",
+            "Our registered address is in Pretoria, at G16 Barclays Square Shopping Centre "
+            "on Celliers Street. It is a business address rather than a walk-in clinic - "
+            "consultations are conducted remotely.",
+        ],
+        "faqs": [
+            ("Do you have rooms in Centurion or Pretoria East?",
+             "No. Consultations are conducted remotely. Our Pretoria address is a "
+             "registered business address, not a walk-in clinic."),
+            ("Can I be seen in person if I need to be?",
+             "Where an examination is required you will be referred appropriately. Mobile "
+             "doctor services are also available subject to location and availability."),
+            ("Is the driver and PDP medical available here?",
+             "That assessment has to happen in person because it includes vision, hearing "
+             "and a physical examination. Get in touch and we will confirm where and when."),
+        ],
+        "services": ["online-doctor-consultation", "driver-pdp-medicals", "specialist-referrals"],
+        "locations": ["online-doctor-pretoria", "online-doctor-gauteng",
+                      "online-doctor-sandton-johannesburg-north"],
+    },
+    {
+        "slug": "online-doctor-sandton-johannesburg-north",
+        "image": "sandton-skyline",
+        "image_alt": "The Sandton skyline at dusk",
+        "nav_label": "Sandton & Joburg North",
+        "place": "Sandton and northern Johannesburg",
+        "region": "Gauteng",
+        "eyebrow": "Sandton & Johannesburg North",
+        "h1": "Online doctor in ",
+        "h1_tail": "Sandton & Joburg North",
+        "title": "Online Doctor Sandton & Johannesburg North | Your Online Doctor",
+        "description": "Online doctor consultations across Sandton, Rosebank, Bryanston, "
+                       "Fourways and northern Johannesburg.",
+        "lede": "For the part of Johannesburg where nobody has a spare two hours.",
+        "intro": [
+            "Sandton and the northern suburbs are the commercial centre of the country, "
+            "and the working culture shows it. A GP appointment competes directly with a "
+            "diary that is already full, and usually loses until the problem becomes "
+            "unavoidable.",
+            "The geography does not help. Living in Fourways or Bryanston and working in "
+            "Sandton means your home, your office and your usual practice are rarely near "
+            "each other, and the stretch of the M1 between them is not forgiving at five "
+            "o'clock.",
+            "A remote consultation fits that pattern rather than fighting it. It takes the "
+            "time an appointment actually requires and none of the time the journey does.",
+        ],
+        "areas_title": "Patients across the north",
+        "areas": [
+            "Sandton", "Rosebank", "Bryanston", "Morningside", "Fourways", "Sunninghill",
+            "Rivonia", "Woodmead", "Melrose", "Illovo", "Parkhurst", "Craighall",
+            "Hyde Park", "Douglasdale", "Lonehill", "Midrand",
+        ],
+        "angle_title": "Why remote care suits this area",
+        "angle": [
+            "Time, not access, is the binding constraint here. Removing the journey and "
+            "the waiting room is most of the problem solved.",
+            "It also suits the number of people working to international hours, for whom "
+            "standard consulting times are the least convenient part of the day.",
+        ],
+        "faqs": [
+            ("Do you have rooms in Sandton?",
+             "No. Your Online Doctor is a digital platform and consultations take place "
+             "remotely. Where an in-person examination is needed, you will be referred "
+             "appropriately."),
+            ("Can I consult between meetings?",
+             "Consultations are arranged for a confirmed time, so they can be fitted around "
+             "a working day, subject to availability and clinical suitability."),
+            ("Can I collect a prescription near the office?",
+             "Yes. A prescription issued after a consultation can be taken to the pharmacy "
+             "of your choice."),
+        ],
+        "services": ["online-doctor-consultation", "mental-health", "weight-management"],
+        "locations": ["online-doctor-johannesburg", "online-doctor-gauteng",
+                      "online-doctor-pretoria-east-centurion"],
     },
 ]
 

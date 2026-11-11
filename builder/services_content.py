@@ -814,6 +814,59 @@ SERVICE_PAGES = [
         ],
         "related": ["mobile-doctor", "online-doctor-consultation", "sick-note-online"],
     },
+    {
+        "slug": "specialist-referrals",
+        "image": "referral",
+        "image_alt": "A doctor writing alongside a stethoscope",
+        "nav_label": "Specialist Referrals",
+        "group": "Medical",
+        "eyebrow": "Specialist Referrals",
+        "h1": "Referral to a ",
+        "h1_tail": "specialist",
+        "title": "Online Specialist Referral South Africa | Your Online Doctor",
+        "description": "Referral into specialist care following an assessment - what a "
+                       "referral is for, how it works, and when one is appropriate.",
+        "lede": "A referral is a clinical decision, not a form. It follows an assessment.",
+        "intro": [
+            "A referral is the point at which a doctor decides your concern needs someone "
+            "with deeper expertise in one area than a general practitioner has. It is a "
+            "normal part of medicine rather than a sign that something has gone wrong.",
+            "What a referral does is hand over context. The specialist receives the "
+            "history, the findings and the reason for referral, which means you are not "
+            "starting from the beginning again. That context is most of the value.",
+            "Through the platform, referral can run into the wider network - medical "
+            "specialists, psychologists, dietitians, physiotherapists and biokineticists - "
+            "rather than ending with a name and a phone number.",
+        ],
+        "covers_title": "What a referral can involve",
+        "covers": [
+            "Assessment of whether specialist input is actually indicated",
+            "Referral to an appropriate medical specialist",
+            "Referral into psychology, dietetics, physiotherapy or biokinetics",
+            "Laboratory or diagnostic requests ahead of the specialist appointment",
+            "A written summary of the history and findings",
+            "Follow-up once the specialist has reported back",
+        ],
+        "suitability": "Not every concern needs a specialist, and a good referral is partly "
+                       "about deciding when one is not required. Where a referral is "
+                       "indicated, it follows an assessment rather than a request, and the "
+                       "specialist decides their own course of treatment.",
+        "faqs": [
+            ("Can I be referred to a specialist after an online consultation?",
+             "Yes, where it is clinically indicated. The referral follows an assessment."),
+            ("Can I ask to be referred to a particular specialist?",
+             "You can raise a preference and it will be taken into account, but the "
+             "decision about whether referral is appropriate is a clinical one."),
+            ("Do I need a referral to see a specialist in South Africa?",
+             "Not always, but a referral means the specialist starts with your history and "
+             "the reason for the referral rather than from scratch. Some medical aids also "
+             "apply different rules to referred and unreferred visits - check with yours."),
+            ("What happens after I see the specialist?",
+             "Where appropriate, follow-up can continue through the platform once the "
+             "specialist has reported back."),
+        ],
+        "related": ["online-doctor-consultation", "mental-health", "physiotherapy"],
+    },
 ]
 
 BY_SLUG = {s["slug"]: s for s in SERVICE_PAGES}

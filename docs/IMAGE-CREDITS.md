@@ -25,3 +25,9 @@ converted to WebP for this site.
 | `assets/img/driving.webp` | [photo-1592805144716-feeccccef5ac](https://unsplash.com/photos/1592805144716-feeccccef5ac) | View from a truck cab on the road |
 | `assets/img/eye-test.webp` | [photo-1576210117723-cd06449a467d](https://unsplash.com/photos/1576210117723-cd06449a467d) | A Snellen eye chart used for vision testing |
 | `assets/img/truck.webp` | [photo-1766785368863-f2188a8c8b32](https://unsplash.com/photos/1766785368863-f2188a8c8b32) | A heavy goods vehicle on a highway |
+| `assets/img/city-cape-town-aerial.webp` | [photo-1580060839134-75a5edca2e99](https://unsplash.com/photos/1580060839134-75a5edca2e99) | Cape Town from the air with Table Mountain behind |
+| `assets/img/cape-town-coast.webp` | [photo-1529528070131-eda9f3e90919](https://unsplash.com/photos/1529528070131-eda9f3e90919) | The Cape Town coastline from above |
+| `assets/img/cape-town-bay.webp` | [photo-1606799955515-85468ee78c26](https://unsplash.com/photos/1606799955515-85468ee78c26) | Table Mountain seen across the bay |
+| `assets/img/pretoria-jacaranda.webp` | [photo-1666013011153-5f73019d8c13](https://unsplash.com/photos/1666013011153-5f73019d8c13) | Jacaranda trees in bloom in Pretoria |
+| `assets/img/sandton-skyline.webp` | [photo-1610307766999-01f45d259959](https://unsplash.com/photos/1610307766999-01f45d259959) | The Sandton skyline at dusk |
+| `assets/img/referral.webp` | [photo-1666886573199-88a2ed65470d](https://unsplash.com/photos/1666886573199-88a2ed65470d) | A doctor writing alongside a stethoscope |
