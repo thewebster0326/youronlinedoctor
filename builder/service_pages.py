@@ -37,6 +37,23 @@ def _service_schema(service):
     }
 
 
+def _sections(service):
+    """Optional long-form sections. Service pages that set `sections` get depth
+    beyond the covers list, which is what lifts a thin page."""
+    secs = service.get("sections")
+    if not secs:
+        return ""
+    out = ""
+    for sec in secs:
+        body = "".join("<p>{}</p>".format(x) for x in sec.get("p", []))
+        if sec.get("list"):
+            body += '<ul class="card__list check-list">{}</ul>'.format(
+                "".join("<li>{}</li>".format(i) for i in sec["list"]))
+        out += "<h2>{}</h2>{}".format(sec["h"], body)
+    return c.band('<div class="narrow reveal prose-body">{}</div>'.format(out),
+                  tone="light2")
+
+
 def _cluster_guides(slug):
     """Link a service page to the guides written to support it."""
     from .guides_content import in_cluster
@@ -76,6 +93,7 @@ def build(service):
             tone="light",
         ),
         c.covers_block(service["covers_title"], service["covers"], service["suitability"]),
+        _sections(service),
         c.steps_section(),
         c.faq_section(service["faqs"]),
         c.related_services(service["related"], BY_SLUG),

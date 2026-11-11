@@ -69,6 +69,54 @@ SERVICE_PAGES = [
     },
     {
         "slug": "prescriptions-online",
+        "sections": [
+            {
+                "h": "What the doctor is weighing",
+                "p": ["Whether the medicine treats what you actually have; whether it is "
+                      "safe given your history, your kidneys and liver, and anything else "
+                      "you take; whether something simpler would work; and whether a "
+                      "prescription is the right answer at all.",
+                      "That calculation is the service. The piece of paper at the end is "
+                      "just the record of it."],
+            },
+            {
+                "h": "What cannot be prescribed this way",
+                "p": ["South African scheduling rules apply exactly as they do in a "
+                      "consulting room. Certain medicines carry prescribing restrictions "
+                      "regardless of how the consultation happened, and controlled "
+                      "substances in particular are not prescribed remotely.",
+                      "Anything where the diagnosis depends on examination findings or a "
+                      "test result also waits until those exist."],
+            },
+            {
+                "h": "Repeats and chronic medication",
+                "p": ["If you are stable on a long-term medicine, a review can usually be "
+                      "handled without travelling anywhere. The doctor is checking that it "
+                      "is still appropriate, still working and still safe given anything "
+                      "that has changed.",
+                      "Occasionally the answer is that you need bloods or a blood pressure "
+                      "reading before the repeat continues. That is the review doing its "
+                      "job rather than being obstructive."],
+            },
+            {
+                "h": "A word on antibiotics",
+                "p": ["A great many infections are viral and do not respond to antibiotics. "
+                      "Prescribing them anyway does not speed your recovery and contributes "
+                      "to resistance that affects everyone.",
+                      "If you are told you do not need them, that is a clinical judgement "
+                      "rather than a cost-saving measure, and the doctor will explain what "
+                      "will actually help."],
+            },
+            {
+                "h": "If you disagree with the outcome",
+                "p": ["Say so during the consultation. Sometimes there is context the "
+                      "doctor does not have, and sometimes the reasoning simply has not "
+                      "been explained well enough.",
+                      "What will not change the outcome is pressure. A prescription is a "
+                      "professional judgement a practitioner signs their registration "
+                      "against."],
+            },
+        ],
         "image": "pharmacy",
         "image_alt": "Shelves in a pharmacy dispensary",
         "nav_label": "Online Prescriptions",
@@ -113,7 +161,16 @@ SERVICE_PAGES = [
             ("Will I definitely get what I ask for?",
              "No. The doctor prescribes what is clinically appropriate, which may differ from "
              "what you expected, or may be nothing at all."),
-        ],
+        
+            ("How do I get the prescription itself?",
+             "It is issued after the consultation and can be taken to the pharmacy of your "
+             "choice. You are not tied to a particular dispensary."),
+            ("Can you prescribe for my child?",
+             "Children can be assessed, but the threshold for needing to be seen in person "
+             "is lower, particularly for infants. The doctor will tell you which applies."),
+            ("What if I am already taking something for this?",
+             "Say so at the start, with the name and dose. Interactions and duplication are "
+             "among the most common avoidable problems in prescribing."),],
         "related": ["online-doctor-consultation", "sick-note-online", "contraception"],
     },
     {
@@ -405,6 +462,61 @@ SERVICE_PAGES = [
     # ------------------------------------------------------ weight & wellness
     {
         "slug": "weight-management",
+        "sections": [
+            {
+                "h": "Why this is a clinical matter, not a willpower one",
+                "p": ["Weight is affected by thyroid function, insulin resistance, "
+                      "polycystic ovary syndrome, sleep quality, several common "
+                      "medications, and mental health. Any of those can make weight loss "
+                      "disproportionately hard, and none of them respond to trying harder.",
+                      "Which is why an assessment comes first. Starting a plan without "
+                      "knowing whether something treatable is working against you wastes "
+                      "months."],
+            },
+            {
+                "h": "What the assessment looks at",
+                "p": ["Your history, what has been tried before and what happened, current "
+                      "medication, sleep, and the practical shape of your week. Testing is "
+                      "requested where it is indicated rather than routinely."],
+                "list": [
+                    "Thyroid function where symptoms suggest it",
+                    "Blood glucose and markers of insulin resistance",
+                    "Cholesterol and other cardiovascular markers",
+                    "Blood pressure",
+                    "Body composition rather than weight alone",
+                    "Review of medication that can affect weight",
+                ],
+            },
+            {
+                "h": "Medication: what it is and is not",
+                "p": ["Weight-management medication exists and can be appropriate. It is "
+                      "prescribed only where clinically appropriate after a full "
+                      "assessment, and alongside the rest of the plan rather than instead "
+                      "of it.",
+                      "It is not a shortcut that removes the need for everything else, and "
+                      "any service offering it without assessment is one to walk away from. "
+                      "The doctor will explain what a given medicine does, what the side "
+                      "effects are, and what happens when you stop."],
+            },
+            {
+                "h": "Why previous attempts failed",
+                "p": ["Usually because the plan was not survivable, not because you lacked "
+                      "discipline. Very restrictive approaches produce fast early results "
+                      "and then collapse, and the regain is demoralising enough to put "
+                      "people off trying again.",
+                      "A plan you can still be following in a year beats a stricter one you "
+                      "abandon in March. That is the single most useful thing a clinician "
+                      "can tell you about weight."],
+            },
+            {
+                "h": "Working as a team",
+                "p": ["Where it would help, medical assessment can be combined with "
+                      "nutritional support from a dietitian and exercise-based input from a "
+                      "biokineticist. Through one platform, those professionals are working "
+                      "from the same information rather than three separate versions of "
+                      "your story."],
+            },
+        ],
         "image": "nutrition",
         "image_alt": "A prepared bowl of vegetables",
         "nav_label": "Weight Management",
@@ -447,7 +559,18 @@ SERVICE_PAGES = [
             ("Do I need blood tests?",
              "Often yes, because several treatable conditions affect weight. The doctor will "
              "issue requests where testing is indicated."),
-        ],
+        
+            ("How much weight will I lose?",
+             "No responsible clinician will give you a number in advance. What the "
+             "assessment establishes is what is realistic for your situation and what is "
+             "driving the difficulty."),
+            ("Do I have to see a dietitian as well?",
+             "Not necessarily, but nutritional support helps in most cases and is available "
+             "through the network."),
+            ("Will I regain it afterwards?",
+             "That is the central question in weight management, and it is why the plan "
+             "matters more than the first few months. Maintenance is part of the work, not "
+             "an afterthought."),],
         "related": ["dietitian", "biokinetics", "mens-health"],
     },
     {
@@ -561,6 +684,58 @@ SERVICE_PAGES = [
     # ----------------------------------------------------------- mental health
     {
         "slug": "mental-health",
+        "sections": [
+            {
+                "h": "What a mental health consultation covers",
+                "p": ["An assessment of what is actually happening, how long it has been "
+                      "going on, how much it is affecting your day-to-day life, and whether "
+                      "anything physical could be contributing.",
+                      "That last part matters more than people expect. Thyroid problems, "
+                      "anaemia, sleep disorders and some medications can all produce "
+                      "symptoms that look like depression or anxiety, which is one good "
+                      "reason to start with a doctor."],
+            },
+            {
+                "h": "Common reasons people get in touch",
+                "p": ["There is no threshold you have to meet before you are allowed to ask "
+                      "for help. These are simply the things that come up most often."],
+                "list": [
+                    "Persistent low mood, or losing interest in things you used to enjoy",
+                    "Anxiety that is interfering with work, sleep or relationships",
+                    "Burnout and exhaustion that rest is not fixing",
+                    "Grief that is not easing",
+                    "Trauma, recent or long past",
+                    "Sleep that has not been right for months",
+                    "Difficulty cutting down on alcohol or other substances",
+                ],
+            },
+            {
+                "h": "Where medication comes into it",
+                "p": ["Sometimes it is appropriate, often it is not, and it is rarely the "
+                      "whole answer on its own. Where it is considered, the doctor will "
+                      "explain what it does, how long it takes to work, and what the "
+                      "trade-offs are.",
+                      "Medication is prescribed only where clinically appropriate following "
+                      "an assessment, and where a psychiatrist should be involved, referral "
+                      "is arranged."],
+            },
+            {
+                "h": "Who finds out",
+                "p": ["The same confidentiality obligations apply as to any consultation. "
+                      "Your employer is not told. A medical certificate, where one is "
+                      "clinically appropriate, states that you were unfit to work - not "
+                      "why.",
+                      "This worries people enough to stop them seeking help, which is worth "
+                      "saying plainly."],
+            },
+            {
+                "h": "If you are worried about someone else",
+                "p": ["You can have a consultation about how to approach it. We cannot "
+                      "discuss another adult's care with you without their consent, but a "
+                      "conversation about how to support someone, and what the options are, "
+                      "is often the useful thing."],
+            },
+        ],
         "image": "therapy",
         "image_alt": "Two people in conversation",
         "nav_label": "Mental Health",
@@ -601,11 +776,60 @@ SERVICE_PAGES = [
             ("What if I am in crisis?",
              "Do not use this platform. Go to your nearest emergency department or call your "
              "local emergency services immediately."),
-        ],
+        
+            ("Do I need a diagnosis before getting in touch?",
+             "No. Most people start with a description of what is wrong rather than a "
+             "name for it."),
+            ("Will this go on a record that affects my insurance or job?",
+             "Consultations are confidential medical records. They are not shared with "
+             "employers. Insurers may ask you directly about your medical history when you "
+             "apply for cover - that is a question for your broker."),
+            ("How quickly can I be seen?",
+             "Subject to availability. If you are in crisis, do not wait - go to your "
+             "nearest emergency department or contact emergency services immediately."),],
         "related": ["psychology", "weight-management", "online-doctor-consultation"],
     },
     {
         "slug": "psychology",
+        "sections": [
+            {
+                "h": "What a first session is actually like",
+                "p": ["Mostly questions, and mostly yours to answer at whatever pace suits "
+                      "you. The psychologist is building a picture: what brought you, how "
+                      "long it has been going on, what you have already tried, and what you "
+                      "want to be different.",
+                      "You are not expected to arrive with it neatly explained. People "
+                      "routinely open with \u201cI do not really know where to start\u201d, "
+                      "and that is a perfectly workable starting point."],
+            },
+            {
+                "h": "How long it takes",
+                "p": ["Longer than one session and shorter than forever. Some focused "
+                      "difficulties resolve in a handful of sessions; longstanding patterns "
+                      "take longer.",
+                      "The psychologist will discuss a likely range after the first session "
+                      "rather than committing you to a number in advance, because an honest "
+                      "estimate needs the assessment first."],
+            },
+            {
+                "h": "Different approaches to therapy",
+                "p": ["You may encounter cognitive behavioural work, which focuses on the "
+                      "relationship between thoughts, feelings and behaviour; psychodynamic "
+                      "work, which looks at longer-standing patterns and their origins; or "
+                      "others again.",
+                      "The evidence is reasonably clear that the working relationship "
+                      "matters at least as much as the specific approach. If it does not "
+                      "feel like a fit after a few sessions, say so - that is useful "
+                      "information rather than a failure."],
+            },
+            {
+                "h": "Where medication fits",
+                "p": ["Psychologists do not prescribe. Where medication may be part of the "
+                      "answer, that is a conversation with a doctor or a psychiatrist, and "
+                      "the two run alongside each other rather than in competition.",
+                      "Plenty of people do one without the other. Plenty do both."],
+            },
+        ],
         "image": "therapy",
         "image_alt": "Two people in conversation",
         "nav_label": "Psychology",
@@ -653,7 +877,16 @@ SERVICE_PAGES = [
             ("Do I need a diagnosis to see a psychologist?",
              "No. Many people seek psychological support for a difficult period rather than "
              "for a diagnosed condition."),
-        ],
+        
+            ("Will I have to talk about my childhood?",
+             "Only if it is relevant to what you came for. Some approaches look at history "
+             "more than others, and you set the pace."),
+            ("What if I do not click with the psychologist?",
+             "Say so. Fit matters more than most people expect, and being matched to "
+             "someone else is a normal request rather than an awkward one."),
+            ("Is anything I say reported to anyone?",
+             "Sessions are confidential, subject to the narrow legal exceptions that apply "
+             "to all healthcare - principally where there is a serious risk of harm."),],
         "related": ["mental-health", "dietitian", "online-doctor-consultation"],
     },
 
