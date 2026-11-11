@@ -352,6 +352,181 @@ LOCATION_PAGES = [
         "services": ["online-doctor-consultation", "prescriptions-online", "mental-health"],
         "locations": ["online-doctor-johannesburg", "online-doctor-cape-town", "online-doctor-durban"],
     },
+    {
+        "slug": "telehealth-cape-town",
+        "image": "city-cape-town",
+        "image_alt": "Cape Town beneath Table Mountain",
+        "nav_label": "Telehealth Cape Town",
+        "place": "Cape Town",
+        "region": "Western Cape",
+        "eyebrow": "Telehealth Cape Town",
+        "h1": "Telehealth in ",
+        "h1_tail": "Cape Town",
+        "title": "Telehealth Cape Town | Your Online Doctor",
+        "description": "Telehealth consultations for Cape Town - what remote care covers, "
+                       "where its limits are, and how to arrange a consultation.",
+        "lede": "Remote consultations for a city where the distance between you and a "
+                "practice is rarely the short part.",
+        "intro": [
+            "Telehealth means a consultation conducted over a call or video link instead "
+            "of in a consulting room. The doctor takes your history, assesses the concern "
+            "and decides what happens next, exactly as they would in person. What is "
+            "missing is the physical examination, and that is the only real difference.",
+            "In Cape Town that difference matters less than the geography does. The "
+            "mountain and the coastline split the city into areas that are close in a "
+            "straight line and slow to travel between in practice, and the N1 and N2 "
+            "funnel most of that movement through a handful of corridors. A fifteen-minute "
+            "appointment routinely costs two hours.",
+            "A remote consultation removes the journey from the equation entirely. Whether "
+            "you are in the City Bowl, out past Bellville, or on the far side of the Cape "
+            "Flats, the consultation happens where you are.",
+        ],
+        "areas_title": "What telehealth handles well",
+        "areas": [
+            "Everyday illness and common conditions", "Follow-up consultations",
+            "Repeat and chronic medication review", "Questions about medication",
+            "Mental health consultations", "Sexual health and contraception",
+            "Weight and lifestyle management", "Test results and next steps",
+            "Specialist referral", "Laboratory test requests",
+        ],
+        "angle_title": "Where it stops",
+        "angle": [
+            "Anything needing hands-on examination, imaging or urgent intervention is not "
+            "suited to a remote consultation, and the doctor will say so and refer you on. "
+            "Being told you need to be seen in person is a normal outcome, not a failure "
+            "of the process.",
+            "It is also not for emergencies. In an emergency, go to your nearest emergency "
+            "department or call your local emergency services immediately.",
+        ],
+        "faqs": [
+            ("Is telehealth available across Cape Town?",
+             "Yes. Consultations are remote, so the whole metro is covered, along with the "
+             "rest of South Africa."),
+            ("Is a telehealth consultation as good as being seen in person?",
+             "For many concerns it is equivalent. For anything needing physical examination "
+             "or imaging it is not, and in those cases you are referred for in-person care."),
+            ("Can I get a prescription after a telehealth consultation?",
+             "A prescription may be issued where it is clinically appropriate following an "
+             "assessment. It can be taken to the pharmacy of your choice."),
+            ("Do the same confidentiality rules apply?",
+             "Yes. The same professional and legal obligations apply as to an in-person "
+             "consultation."),
+        ],
+        "services": ["online-doctor-consultation", "prescriptions-online", "mental-health"],
+        "locations": ["online-doctor-cape-town", "online-doctor-cape-town-southern-suburbs",
+                      "telehealth-south-africa"],
+    },
+    {
+        "slug": "online-doctor-cape-town-southern-suburbs",
+        "image": "city-cape-town",
+        "image_alt": "Cape Town beneath Table Mountain",
+        "nav_label": "Cape Town Southern Suburbs",
+        "place": "the Southern Suburbs",
+        "region": "Western Cape",
+        "eyebrow": "Southern Suburbs",
+        "h1": "Online doctor in the ",
+        "h1_tail": "Southern Suburbs",
+        "title": "Online Doctor Southern Suburbs Cape Town | Your Online Doctor",
+        "description": "Online doctor consultations for Claremont, Rondebosch, Wynberg, "
+                       "Newlands and the wider Southern Suburbs.",
+        "lede": "From Mowbray down to Tokai, without the drive along the M3.",
+        "intro": [
+            "The Southern Suburbs are well supplied with healthcare, which makes the "
+            "problem here a different one. It is not that there is nowhere to go. It is "
+            "that getting there, parking, and waiting consumes a working morning for "
+            "something that takes fifteen minutes.",
+            "This is also a corridor built around commuting. A great many people living in "
+            "Claremont, Rondebosch or Kenilworth work in the CBD or in Century City, and "
+            "spend the hours a practice is open on the wrong side of the M3.",
+            "Consulting remotely sidesteps both. You speak to a doctor from home, from the "
+            "office, or from campus, and the outcome - advice, a prescription, a "
+            "certificate, a referral - is the same as it would be in rooms, where that is "
+            "clinically appropriate.",
+        ],
+        "areas_title": "Patients across the Southern Suburbs",
+        "areas": [
+            "Claremont", "Rondebosch", "Newlands", "Wynberg", "Kenilworth", "Mowbray",
+            "Observatory", "Bishopscourt", "Constantia", "Tokai", "Plumstead",
+            "Diep River", "Bergvliet", "Lansdowne", "Rosebank", "Pinelands",
+        ],
+        "angle_title": "Why remote care suits this area",
+        "angle": [
+            "The barrier here is time rather than access. Removing the journey and the "
+            "waiting room is most of the problem solved.",
+            "It also fits the student and academic population around UCT, where timetables "
+            "rarely line up neatly with consulting hours.",
+        ],
+        "faqs": [
+            ("Do you have rooms in the Southern Suburbs?",
+             "No. Your Online Doctor is a digital platform and consultations take place "
+             "remotely. Where an in-person examination is needed, you will be referred "
+             "appropriately."),
+            ("Can I collect a prescription locally?",
+             "Yes. A prescription issued after a consultation can be taken to the pharmacy "
+             "of your choice."),
+            ("What if I need to be examined?",
+             "The doctor will tell you and refer you for in-person care. That judgement is "
+             "made in every consultation."),
+        ],
+        "services": ["online-doctor-consultation", "mental-health", "sick-note-online"],
+        "locations": ["online-doctor-cape-town", "online-doctor-cape-town-northern-suburbs",
+                      "telehealth-cape-town"],
+    },
+    {
+        "slug": "online-doctor-cape-town-northern-suburbs",
+        "image": "city-cape-town",
+        "image_alt": "Cape Town beneath Table Mountain",
+        "nav_label": "Cape Town Northern Suburbs",
+        "place": "the Northern Suburbs",
+        "region": "Western Cape",
+        "eyebrow": "Northern Suburbs",
+        "h1": "Online doctor in the ",
+        "h1_tail": "Northern Suburbs",
+        "title": "Online Doctor Northern Suburbs Cape Town | Your Online Doctor",
+        "description": "Online doctor consultations for Bellville, Durbanville, Brackenfell, "
+                       "Parow, Goodwood and the wider Northern Suburbs.",
+        "lede": "Across Bellville, Durbanville and Brackenfell, without losing a morning to "
+                "the N1.",
+        "intro": [
+            "The Northern Suburbs run a long way inland, and the practices are spread "
+            "thinly across a lot of ground. A trip from Brackenfell or Kraaifontein to a "
+            "doctor and back is a genuine undertaking, particularly at the times of day "
+            "the N1 is busiest.",
+            "It is also a part of the city with a large working and family population - "
+            "people with jobs that do not release them easily mid-morning, and parents "
+            "fitting appointments around school runs.",
+            "A remote consultation takes the travel out of it. The assessment happens "
+            "wherever you are, and whatever follows from it is the same as it would be in "
+            "a consulting room, where that is clinically appropriate.",
+        ],
+        "areas_title": "Patients across the Northern Suburbs",
+        "areas": [
+            "Bellville", "Durbanville", "Brackenfell", "Kraaifontein", "Parow",
+            "Goodwood", "Kuils River", "Tygervalley", "Welgemoed", "Plattekloof",
+            "Panorama", "Monte Vista", "Edgemead", "Bothasig", "Protea Valley",
+            "Eversdal",
+        ],
+        "angle_title": "Why remote care suits this area",
+        "angle": [
+            "Distance is the real barrier here, not availability. The further out you live, "
+            "the more a consultation that needs no journey is worth.",
+            "It also suits shift and trade work, which is common across the industrial "
+            "areas around Parow and Bellville and rarely fits standard consulting hours.",
+        ],
+        "faqs": [
+            ("Do you have rooms in Bellville or Durbanville?",
+             "No. Consultations are conducted remotely. Where an in-person examination is "
+             "needed, you will be referred appropriately."),
+            ("Is the service available further out, towards Paarl or Stellenbosch?",
+             "Yes. Consultations are remote and available anywhere in South Africa."),
+            ("Can I consult outside normal working hours?",
+             "Your Online Doctor is designed to provide convenient and extended access, "
+             "subject to service availability and clinical suitability."),
+        ],
+        "services": ["online-doctor-consultation", "prescriptions-online", "weight-management"],
+        "locations": ["online-doctor-cape-town", "online-doctor-cape-town-southern-suburbs",
+                      "telehealth-cape-town"],
+    },
 ]
 
 BY_SLUG = {p["slug"]: p for p in LOCATION_PAGES}
